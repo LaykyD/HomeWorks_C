@@ -4,9 +4,8 @@
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
 int xa, ya, za, xb, yb, zb;
-string coordinate = "0";
 
-int input(string coordinate) {
+int input() {
     int res;
     while (!int.TryParse(Console.ReadLine(), out res))
     {
@@ -16,22 +15,22 @@ int input(string coordinate) {
 }
 
 Console.Write("Введите координату Х точки А: ");
-xa = input(coordinate);
+xa = input();
 
 Console.Write("Введите координату Y точки А: ");
-ya = input(coordinate);
+ya = input();
 
 Console.Write("Введите координату Z точки А: ");
-za = input(coordinate);
+za = input();
 
 Console.Write("Введите координату Х точки B: ");
-xb = input(coordinate);
+xb = input();
 
 Console.Write("Введите координату Y точки B: ");
-yb = input(coordinate);
+yb = input();
 
 Console.Write("Введите координату Z точки B: ");
-zb = input(coordinate);
+zb = input();
 
 double Distance(double xa, double ya, double za, double xb, double yb, double zb)
 {
