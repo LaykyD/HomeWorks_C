@@ -9,14 +9,6 @@ Console.WriteLine("Программа, определяющая является
 Console.Write("Введите пятизначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number > 9999 && number < 100000) {
-        CheckPalindrome(number);
-}
-else {
-    Console.WriteLine("Введено не пятизначное число!");
-    return;
-}
-
 bool CheckPalindrome(int nunmber) {
     int firstDigit =  number / 10000;
     int secondDigit = (number / 1000) % 10;
@@ -28,7 +20,9 @@ bool CheckPalindrome(int nunmber) {
     return false;
 }
 
-if (CheckPalindrome(number))
-    Console.WriteLine("Да");
-else
-    Console.WriteLine("Нет");
+if (number > 9999 && number < 100000) {
+        if (CheckPalindrome(number))
+            Console.WriteLine("Да");
+        else
+            Console.WriteLine("Нет");
+}
