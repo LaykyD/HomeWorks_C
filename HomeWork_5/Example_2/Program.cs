@@ -23,13 +23,21 @@ int[] NewRandomArray(int discharge){
 	return arr;
 }
 
+// Решение выдает сумму именно элементов на нечетных позициях массива, т.е. 1-ый, 3-й и т.д элементы массива,
+// а не сумму элементов с нечетными индексами (первый элемент массива имеет индекс 0, второй - индекс 2 и т.д.)
+// Если требуется сумма элементов с нечетными индексами, то стартуем цикл с первого индекса:
+//for(int i = 1; i < arr.Length; i += 2){sum += arr[i];}
+
 int SumNumberOddToArray (int[] arr) {
     int sum = 0;
-    for (int i = 0; i < arr.Length; i++){
-        if (i % 2 == 0) {
-            sum += arr[i];
-        }
-	}
+    // for (int i = 0; i < arr.Length; i++){
+    //     if (i % 2 == 0) {
+    //         sum += arr[i];
+    //     }
+	// }
+    for(int i = 0; i < arr.Length; i += 2){
+        sum += arr[i];
+    }
     return sum;
 }
 
