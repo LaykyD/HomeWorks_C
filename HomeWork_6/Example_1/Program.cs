@@ -4,7 +4,7 @@
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 3
 
-// // int input() {
+// int input() {
 //     int res;
 //     while (!int.TryParse(Console.ReadLine(), out res))
 //     {
